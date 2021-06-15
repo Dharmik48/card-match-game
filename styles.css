@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 25px;
+    position: relative;
+    height: 100vh;
+    font-family: "montserrat", sans-serif;
+    background-color: #119dcf;
+}
+
+h1 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: #322e2f;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+main {
+    max-width: min-content;
+    margin: 10px auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    /* background-color: red; */
+}
+
+main p {
+    color: #fff;
+    align-self: flex-start;
+    font-weight: 700;
+    /* margin-left: 100px; */
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: #119dcf;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 700;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 500ms ease;
+    outline: none;
+}
+
+.btn:hover {
+    color: #119dcf;
+    background-color: #fff;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    font-size: 4rem;
+    background-color: #e71e96;
+    color: #e71e96;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: all 1000ms;
+    transform: rotateY(180deg);
+}
+
+.card i {
+    opacity: 0;
+    transition: all 500ms ease;
+    transform: rotateY(180deg);
+    pointer-events: none;
+    /* transition-delay: 100ms; */
+}
+
+/* Animate Card */
+.card.animate {
+    background-color: #fff;
+    transform: rotateY(0deg);
+}
+
+.card.animate i {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 300ms ease;
+}
+
+.msg.hidden {
+    transform: scale(0);
+}
+
+.msg h1 {
+    color: #fff;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
